@@ -1,0 +1,6 @@
+[submodule "Vision_CENTRAL"]
+	path = Vision_CENTRAL
+	url = ../vision-central.git
+[submodule "Vision_Merchandising"]
+	path = Vision_Merchandising
+	url = ../vision-merchandising.git
