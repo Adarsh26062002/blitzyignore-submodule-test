@@ -1,0 +1,14 @@
+# Optional, developer-only tooling for the blitzyignore-submodule-test suite.
+# NOT imported by any runtime module — the runtime stays zero-dependency (AAP 0.6.1, 2.6.2).
+# The primary test approach uses the standard-library `unittest` and needs NOTHING here.
+# Install (optional):  python -m pip install -r requirements-dev.txt
+
+# --- Coverage measurement (used with the primary unittest approach) ---
+# Produces the 100% "cover all logic" evidence via:
+#   coverage run --rcfile=.coveragerc -m unittest discover -s tests && coverage report -m
+coverage==7.15.2
+
+# --- Optional alternative test runner (only if dev dependencies are permitted) ---
+# Terser assertions + native parametrization for the contract tests (AAP 0.3.2).
+pytest==9.1.1
+pytest-cov==7.1.0
