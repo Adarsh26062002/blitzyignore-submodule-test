@@ -1,0 +1,19 @@
+# Optional, developer-only coverage.py configuration (AAP 0.5.4, 0.7.1).
+# Restricts measurement to EXACTLY the six in-scope marker files so that
+# .blitzyignore-excluded paths (secrets.py at every level, Vision_CENTRAL/build/,
+# and Vision_CENTRAL/nested-utils/temp/) are NEVER measured (AAP 0.10.1).
+# Usage: coverage run --rcfile=.coveragerc -m unittest discover -s tests && coverage report -m
+
+[run]
+branch = True
+include =
+    app.py
+    Vision_CENTRAL/service.py
+    Vision_CENTRAL/nested-utils/util.py
+    Vision_CENTRAL/nested-utils/build/generated.py
+    Vision_Merchandising/sales.py
+    Vision_Merchandising/build/report.py
+
+[report]
+show_missing = True
+fail_under = 100
